@@ -37,7 +37,7 @@ public class ObserverTest {
         private double doMeasurment(){
             double roll = random.nextDouble();
             if(roll <= 0.15D)
-                previousValue += increment;
+                previousValue -= increment;
             else if(roll > 0.85D)
                 previousValue += increment;
 
