@@ -23,4 +23,9 @@ public class HasQuarterState implements State {
     public void dispense(GumballMachine machine) throws StateException {
         throw new StateException("The ball can not be dispensed, you need to turn the crank first.");
     }
+
+    @Override
+    public void refill(GumballMachine machine, int amount) throws StateException {
+        throw new StateException("You cannot refill the machine at this moment.");
+    }
 }

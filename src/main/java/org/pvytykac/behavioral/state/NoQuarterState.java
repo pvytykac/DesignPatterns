@@ -22,4 +22,14 @@ public class NoQuarterState implements State {
     public void dispense(GumballMachine machine) throws StateException {
         throw new StateException("Insert a quarter then turn the crank.");
     }
+
+    @Override
+    public void refill(GumballMachine machine, int amount) throws StateException {
+        machine.setNumberOfBalls(machine.getNumberOfBalls() + amount);
+        System.out.println("The machine was refilled, gumballs before refill = "
+                + (machine.getNumberOfBalls() - amount)
+                + ", now = "
+                + machine.getNumberOfBalls());
+    }
+
 }

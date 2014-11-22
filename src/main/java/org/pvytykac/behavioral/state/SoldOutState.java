@@ -22,4 +22,11 @@ public class SoldOutState implements State {
     public void dispense(GumballMachine machine) throws StateException {
         throw new StateException("The gumball machine is sold out.");
     }
+
+    @Override
+    public void refill(GumballMachine machine, int amount) throws StateException {
+        machine.setNumberOfBalls(amount);
+        machine.setState(GumballMachine.getNoQuarterState());
+        System.out.println("The empty machine has been refilled with " + amount + " gumballs.");
+    }
 }

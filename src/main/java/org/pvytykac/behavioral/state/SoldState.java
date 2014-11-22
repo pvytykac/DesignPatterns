@@ -27,4 +27,9 @@ public class SoldState implements State {
             machine.setState(GumballMachine.getSoldOutState());
         }
     }
+
+    @Override
+    public void refill(GumballMachine machine, int amount) throws StateException {
+        throw new StateException("You cannot refill the machine at this moment.");
+    }
 }

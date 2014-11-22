@@ -22,9 +22,13 @@ public class GumballMachine {
         state.insertQuarter(this);
     }
 
-    public void turnCrank() throws StateException{
+    public void turnCrank() throws StateException {
         state.turnCrank(this);
         state.dispense(this);
+    }
+
+    public void refill(int amount) throws StateException {
+        state.refill(this, amount);
     }
 
     public static State getHasQuarterState() {
