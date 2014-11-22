@@ -14,7 +14,4 @@ public class NewsResult {
         return liHeaders;
     }
 
-    public void setLiHeaders(List<String> liHeaders) {
-        this.liHeaders = liHeaders;
-    }
 }
